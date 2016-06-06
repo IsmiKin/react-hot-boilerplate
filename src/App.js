@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 
+import Test from './Test.js';
+
 var App = React.createClass({
   render() {
     return (
-      <h1>Hello, world.</h1>
+      <div>
+        <h1>Hello and hi, world.</h1>
+        <Test name="Jakob" count={1}  />
+      </div>
     );
   }
 });

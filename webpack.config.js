@@ -14,7 +14,11 @@ module.exports = {
     publicPath: '/static/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin({
+      'process.env': {
+        'API_URL': JSON.stringify(process.env.API_URL)
+      }
+    })
   ],
   module: {
     loaders: [{
